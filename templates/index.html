@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiskovalec</title>
+</head>
+<body>
+    <h1>Dobrodošli!</h1>
+    <p><strong>IP naslov:</strong> {{ visit_data['ip'] }}</p>
+    <p><strong>Lokacija:</strong> {{ visit_data['location'] }}</p>
+    <p><strong>Vreme:</strong> {{ visit_data['weather'] }}</p>
+    <p><strong>Temperatura:</strong> {{ visit_data['temperature'] }} °C</p>
+    <br>
+    <a href="/obiskovalci">Pregled vseh obiskov</a>
+</body>
+</html>
