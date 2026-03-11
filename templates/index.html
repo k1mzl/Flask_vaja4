@@ -1,17 +1,42 @@
-<!DOCTYPE html>
-<html lang="sl">
+<html lang="" en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obiskovalec</title>
+    <title>IP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-    <h1>Dobrodošli!</h1>
-    <p><strong>IP naslov:</strong> {{ visit_data['ip'] }}</p>
-    <p><strong>Lokacija:</strong> {{ visit_data['location'] }}</p>
-    <p><strong>Vreme:</strong> {{ visit_data['weather'] }}</p>
-    <p><strong>Temperatura:</strong> {{ visit_data['temperature'] }} °C</p>
-    <br>
-    <a href="/obiskovalci">Pregled vseh obiskov</a>
 </body>
+
 </html>
+<script>
+    function btnClick() {
+      
+
+        console.log(vnosInp)
+        $.ajax({
+            url: "/coinData",
+            data: {
+                zipcode: 97201,
+                vrednost: vnosInp
+
+            },
+            success: function (result) {
+                console.log(result)
+                divCoin.innerHTML = result.status
+                Slike.src = result.img
+
+
+                
+            }
+        });
+
+        
+        //console.log("Halo")
+    }
+
+
+
+</script>
